@@ -1,241 +1,301 @@
-# AI-Cyber-Threat-Intelligence-System
+# 🛡️ AI-Cyber-Threat-Intelligence-System
 
-## Overview
+> ⚡ AI-Powered Cyber Threat Intelligence & SOC Automation Platform  
+> 🧠 Detect | Analyze | Predict | Respond | Protect
 
-AI-Cyber-Threat-Intelligence-System is an AI-powered cybersecurity platform designed to help Security Operation Centers (SOC) detect, analyze, predict, and respond to cyber threats.
-
-The system combines:
-
-- Security Data Collection
-- SOC Monitoring Dashboard
-- AI Threat Detection
-- Attack Path Prediction
-- SOAR Automated Response
-
-to provide an intelligent defensive cybersecurity solution.
 
 ---
 
-# Project Architecture
+# 🌐 Overview
 
-The project is divided into multiple development phases:
+🤖 **AI-Cyber-Threat-Intelligence-System** is an advanced defensive cybersecurity platform designed to help Security Operations Centers (SOC) detect, analyze, predict, and respond to cyber threats using Artificial Intelligence.
+
+The platform combines:
+
+🔍 Security Data Collection  
+📊 SOC Monitoring Dashboard  
+🧠 AI Threat Detection  
+🕸️ Attack Path Prediction  
+⚡ SOAR Automated Response  
+
+             🛡️ AI CYBER DEFENSE SYSTEM
+
+
+    🛰️ Security Data Sources
+
+              ↓
+
+    📥 Data Collection & Log Management
+
+              ↓
+
+    🧠 AI Threat Detection Engine
+
+              ↓
+
+    🕸️ Attack Path Prediction
+
+              ↓
+
+    📊 SOC Monitoring Dashboard
+
+              ↓
+
+    ⚡ SOAR Automated Response
+
+              ↓
+
+    👨‍💻 Security Operations Team
+
+                 🛡️ AI CYBER DEFENSE SYSTEM
+
+
+    🛰️ Security Data Sources
+
+              ↓
+
+    📥 Data Collection & Log Management
+
+              ↓
+
+    🧠 AI Threat Detection Engine
+
+              ↓
+
+    🕸️ Attack Path Prediction
+
+              ↓
+
+    📊 SOC Monitoring Dashboard
+
+              ↓
+
+    ⚡ SOAR Automated Response
+
+              ↓
+
+    👨‍💻 Security Operations Team
+
+    
 
 ---
 
-# Phase 1
-# Project Foundation
+# 🏗️ Phase 1: Project Foundation
 
-## Purpose
+## 🎯 Purpose
 
-Create the base architecture of the cybersecurity platform.
+Build the base infrastructure of the cybersecurity platform.
 
-## Main Features
 
-- Frontend setup
-- Backend API setup
-- Database configuration
-- Docker environment
-- Project documentation
+## 🔥 Features
 
-## Technologies
+✅ Frontend Architecture
+
+✅ Backend API Framework
+
+✅ Database Configuration
+
+✅ Docker Environment
+
+✅ Project Documentation
+
+
+## 🧰 Technology
 
 Frontend:
 
-- React
-- Vite
+⚛️ React  
+⚡ Vite  
+
 
 Backend:
 
-- Python
-- FastAPI
+🐍 Python  
+🚀 FastAPI  
+
 
 Database:
 
-- PostgreSQL
-
-
----
-
-# Phase 2
-# SOC Dashboard Development
-
-## Purpose
-
-Develop the Security Operations Center dashboard.
-
-## Features
-
-- Security overview dashboard
-- Threat visualization
-- Alert monitoring
-- Asset monitoring
-- Risk score display
-- Security reports
-
-## Components
-
-- Dashboard
-- Threat Cards
-- Alert Cards
-- Risk Charts
-- Reports
-
-
----
-
-# Phase 3
-# Data Collection and Log Management
-
-## Purpose
-
-Collect and manage cybersecurity data.
-
-## Features
-
-- Log ingestion
-- Log parsing
-- Data normalization
-- Security event storage
-- Log analysis pipeline
-
-Supported Sources:
-
-- Application logs
-- Server logs
-- Network logs
-- Security events
-
-
-Data Flow:
-
-
+🐘 PostgreSQL
 
 
 
 ---
 
-# Phase 4
-# AI Threat Detection Engine
+# 📊 Phase 2: SOC Dashboard Development
 
-## Purpose
+## 🎯 Purpose
 
-Use Artificial Intelligence to detect suspicious security events.
-
-## Features
-
-- Anomaly detection
-- Threat classification
-- Risk prediction
-- User behavior analysis
-
-## AI Components
-
-- Machine Learning Models
-- Feature Engineering
-- Dataset Processing
-- Prediction Engine
+Create a Security Operations Center monitoring dashboard.
 
 
-Flow:
+## 🔥 Features
+
+📊 Security Overview
+
+🚨 Threat Monitoring
+
+⚠️ Alert Management
+
+🖥️ Asset Monitoring
+
+📈 Risk Score Visualization
+
+📄 Security Reports
+
+
+## Dashboard Flow
+
 
 
 ---
 
-# Phase 5
-# Attack Path Prediction
+# 📥 Phase 3: Data Collection & Log Management
 
-## Purpose
+## 🎯 Purpose
+
+Collect and process cybersecurity data from different sources.
+
+
+## 🔥 Features
+
+📥 Log Collection
+
+🔎 Log Parsing
+
+🧹 Data Normalization
+
+🗄️ Security Event Storage
+
+📊 Log Analysis Pipeline
+
+
+## Supported Sources
+
+
+
+---
+
+# 🧠 Phase 4: AI Threat Detection Engine
+
+## 🎯 Purpose
+
+Detect suspicious activities using Artificial Intelligence.
+
+
+## 🔥 Features
+
+🤖 Anomaly Detection
+
+🎯 Threat Classification
+
+📈 Risk Prediction
+
+👤 Behavior Analysis
+
+
+## AI Flow
+
+
+
+---
+
+# 🕸️ Phase 5: Attack Path Prediction
+
+## 🎯 Purpose
 
 Predict possible attack paths and identify risky assets.
 
-## Features
 
-- Attack graph generation
-- Asset relationship mapping
-- Risk calculation
-- Vulnerability impact analysis
-- Security recommendations
+## 🔥 Features
+
+🕸️ Attack Graph Generation
+
+🔗 Asset Relationship Mapping
+
+📊 Risk Calculation
+
+🔍 Vulnerability Impact Analysis
+
+💡 Security Recommendations
 
 
-Flow:
+## Prediction Flow
+
 
 
 ---
 
-# Phase 6
-# SOAR Automated Response
+# ⚡ Phase 6: SOAR Automated Response
 
-## Purpose
+## 🎯 Purpose
 
-Automate cybersecurity incident response workflows.
-
-## Features
-
-### Incident Management
-
-- Create incidents
-- Track status
-- Assign severity
-- Maintain timeline
+Automate cybersecurity incident response processes.
 
 
-### Playbook Engine
+## 🚨 Incident Management
 
-- Response workflows
-- Automated procedures
-- Action tracking
+Features:
 
+✅ Create incidents
 
-### Automation Engine
+✅ Track incidents
 
-- Alert processing
-- Workflow execution
-- Response management
+✅ Assign severity
 
-
-### Notification System
-
-- Email alerts
-- Webhook notifications
+✅ Maintain timeline
 
 
-### Security Operations
 
-- Authentication
-- Role management
-- Audit logging
-- Reporting
+## 📜 Playbook Engine
+
+Features:
+
+⚙️ Response Workflow
+
+⚡ Automated Procedures
+
+📋 Action Tracking
 
 
-Flow:
-             Security Data Sources
-                     |
-                     |
-                     ↓
 
-          Phase 3 Log Management
+## 🤖 Automation Engine
 
-                     |
-                     ↓
+Features:
 
-          Phase 4 AI Detection Engine
+🚨 Alert Processing
 
-                     |
-                     ↓
+🔄 Workflow Execution
 
-          Phase 5 Attack Prediction
+🛡️ Response Management
 
-                     |
-                     ↓
 
-          Phase 2 SOC Dashboard
 
-                     |
-                     ↓
+## 📢 Notification System
 
-          Phase 6 SOAR Response
+Features:
 
-                     |
-                     ↓
+📧 Email Notification
 
-          Security Operations Team
+🔗 Webhook Notification
+
+
+
+## 🔐 Security Operations
+
+Features:
+
+👤 Authentication
+
+🎭 Role Management
+
+📝 Audit Logging
+
+📊 Reporting
+
+
+
+---
+
+# 🧩 Complete System Workflow
+

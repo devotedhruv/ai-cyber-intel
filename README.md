@@ -1,301 +1,230 @@
-# 🛡️ AI-Cyber-Threat-Intelligence-System
+````markdown
+<p align="center">
 
-> ⚡ AI-Powered Cyber Threat Intelligence & SOC Automation Platform  
-> 🧠 Detect | Analyze | Predict | Respond | Protect
+# 🛡️ AI Cyber Threat Intelligence System
 
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=28&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&width=900&lines=AI+Cyber+Threat+Intelligence+System;SOC+Monitoring+Platform;AI+Threat+Detection;Attack+Path+Prediction;SOAR+Automation;Built+with+React+%2B+FastAPI+%2B+AI" />
 
----
+</p>
 
-# 🌐 Overview
+<p align="center">
 
-🤖 **AI-Cyber-Threat-Intelligence-System** is an advanced defensive cybersecurity platform designed to help Security Operations Centers (SOC) detect, analyze, predict, and respond to cyber threats using Artificial Intelligence.
+![Python](https://img.shields.io/badge/Python-3.13-blue?style=for-the-badge&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge&logo=react)
+![Vite](https://img.shields.io/badge/Vite-Build-646CFF?style=for-the-badge&logo=vite)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791?style=for-the-badge&logo=postgresql)
+![Docker](https://img.shields.io/badge/Docker-Container-2496ED?style=for-the-badge&logo=docker)
+![AI](https://img.shields.io/badge/Artificial%20Intelligence-Powered-red?style=for-the-badge)
+![Cybersecurity](https://img.shields.io/badge/Cyber-Security-success?style=for-the-badge)
 
-The platform combines:
-
-🔍 Security Data Collection  
-📊 SOC Monitoring Dashboard  
-🧠 AI Threat Detection  
-🕸️ Attack Path Prediction  
-⚡ SOAR Automated Response  
-
-             🛡️ AI CYBER DEFENSE SYSTEM
-
-
-    🛰️ Security Data Sources
-
-              ↓
-
-    📥 Data Collection & Log Management
-
-              ↓
-
-    🧠 AI Threat Detection Engine
-
-              ↓
-
-    🕸️ Attack Path Prediction
-
-              ↓
-
-    📊 SOC Monitoring Dashboard
-
-              ↓
-
-    ⚡ SOAR Automated Response
-
-              ↓
-
-    👨‍💻 Security Operations Team
-
-                 🛡️ AI CYBER DEFENSE SYSTEM
-
-
-    🛰️ Security Data Sources
-
-              ↓
-
-    📥 Data Collection & Log Management
-
-              ↓
-
-    🧠 AI Threat Detection Engine
-
-              ↓
-
-    🕸️ Attack Path Prediction
-
-              ↓
-
-    📊 SOC Monitoring Dashboard
-
-              ↓
-
-    ⚡ SOAR Automated Response
-
-              ↓
-
-    👨‍💻 Security Operations Team
-
-    
+</p>
 
 ---
 
-# 🏗️ Phase 1: Project Foundation
+# 📖 Overview
 
-## 🎯 Purpose
-
-Build the base infrastructure of the cybersecurity platform.
-
-
-## 🔥 Features
-
-✅ Frontend Architecture
-
-✅ Backend API Framework
-
-✅ Database Configuration
-
-✅ Docker Environment
-
-✅ Project Documentation
-
-
-## 🧰 Technology
-
-Frontend:
-
-⚛️ React  
-⚡ Vite  
-
-
-Backend:
-
-🐍 Python  
-🚀 FastAPI  
-
-
-Database:
-
-🐘 PostgreSQL
-
-
+AI Cyber Threat Intelligence System is an AI-powered Security Operations Center (SOC) platform that collects logs, detects cyber threats using Machine Learning, predicts attack paths, and automates incident response using SOAR.
 
 ---
 
-# 📊 Phase 2: SOC Dashboard Development
+# 🏗 Complete System Architecture
 
-## 🎯 Purpose
+```mermaid
+flowchart TD
 
-Create a Security Operations Center monitoring dashboard.
+A["🌐 Security Data Sources"]
 
+subgraph Sources
+A1["🖥 Server Logs"]
+A2["🌍 Network Logs"]
+A3["📱 Application Logs"]
+A4["🔥 Firewall"]
+A5["🛡 IDS / IPS"]
+A6["🔐 Authentication Logs"]
+end
 
-## 🔥 Features
+subgraph Phase3["📥 Phase 3 - Log Management"]
+B1["Log Collection"]
+B2["Log Parsing"]
+B3["Normalization"]
+B4["PostgreSQL"]
+end
 
-📊 Security Overview
+subgraph Phase4["🤖 Phase 4 - AI Detection"]
+C1["Feature Engineering"]
+C2["Machine Learning"]
+C3["Anomaly Detection"]
+C4["Threat Classification"]
+C5["Risk Prediction"]
+end
 
-🚨 Threat Monitoring
+subgraph Phase5["🕸 Phase 5 - Attack Prediction"]
+D1["Attack Graph"]
+D2["Asset Mapping"]
+D3["Risk Analysis"]
+D4["Prediction Engine"]
+end
 
-⚠️ Alert Management
+subgraph Phase2["📊 Phase 2 - SOC Dashboard"]
+E1["Dashboard"]
+E2["Threat Cards"]
+E3["Alerts"]
+E4["Risk Charts"]
+E5["Reports"]
+end
 
-🖥️ Asset Monitoring
+subgraph Phase6["⚡ Phase 6 - SOAR"]
+F1["Incident"]
+F2["Playbooks"]
+F3["Automation"]
+F4["Email Alerts"]
+F5["Webhooks"]
+F6["Security Team"]
+end
 
-📈 Risk Score Visualization
+A --> A1
+A --> A2
+A --> A3
+A --> A4
+A --> A5
+A --> A6
 
-📄 Security Reports
+A1 --> B1
+A2 --> B1
+A3 --> B1
+A4 --> B1
+A5 --> B1
+A6 --> B1
 
+B1 --> B2
+B2 --> B3
+B3 --> B4
 
-## Dashboard Flow
+B4 --> C1
+C1 --> C2
+C2 --> C3
+C3 --> C4
+C4 --> C5
 
+C5 --> D1
+D1 --> D2
+D2 --> D3
+D3 --> D4
 
+D4 --> E1
+E1 --> E2
+E1 --> E3
+E1 --> E4
+E1 --> E5
 
----
-
-# 📥 Phase 3: Data Collection & Log Management
-
-## 🎯 Purpose
-
-Collect and process cybersecurity data from different sources.
-
-
-## 🔥 Features
-
-📥 Log Collection
-
-🔎 Log Parsing
-
-🧹 Data Normalization
-
-🗄️ Security Event Storage
-
-📊 Log Analysis Pipeline
-
-
-## Supported Sources
-
-
-
----
-
-# 🧠 Phase 4: AI Threat Detection Engine
-
-## 🎯 Purpose
-
-Detect suspicious activities using Artificial Intelligence.
-
-
-## 🔥 Features
-
-🤖 Anomaly Detection
-
-🎯 Threat Classification
-
-📈 Risk Prediction
-
-👤 Behavior Analysis
-
-
-## AI Flow
-
-
-
----
-
-# 🕸️ Phase 5: Attack Path Prediction
-
-## 🎯 Purpose
-
-Predict possible attack paths and identify risky assets.
-
-
-## 🔥 Features
-
-🕸️ Attack Graph Generation
-
-🔗 Asset Relationship Mapping
-
-📊 Risk Calculation
-
-🔍 Vulnerability Impact Analysis
-
-💡 Security Recommendations
-
-
-## Prediction Flow
-
-
+E1 --> F1
+F1 --> F2
+F2 --> F3
+F3 --> F4
+F3 --> F5
+F3 --> F6
+```
 
 ---
 
-# ⚡ Phase 6: SOAR Automated Response
+# 🤖 AI Threat Detection Workflow
 
-## 🎯 Purpose
+```mermaid
+flowchart LR
 
-Automate cybersecurity incident response processes.
+Logs["📂 Security Logs"]
+Process["⚙ Data Processing"]
+Features["🧠 Feature Engineering"]
+Model["🤖 ML Model"]
+Predict["🎯 Prediction"]
+Threat["🚨 Threat Alert"]
+Dashboard["📊 SOC Dashboard"]
 
-
-## 🚨 Incident Management
-
-Features:
-
-✅ Create incidents
-
-✅ Track incidents
-
-✅ Assign severity
-
-✅ Maintain timeline
-
-
-
-## 📜 Playbook Engine
-
-Features:
-
-⚙️ Response Workflow
-
-⚡ Automated Procedures
-
-📋 Action Tracking
-
-
-
-## 🤖 Automation Engine
-
-Features:
-
-🚨 Alert Processing
-
-🔄 Workflow Execution
-
-🛡️ Response Management
-
-
-
-## 📢 Notification System
-
-Features:
-
-📧 Email Notification
-
-🔗 Webhook Notification
-
-
-
-## 🔐 Security Operations
-
-Features:
-
-👤 Authentication
-
-🎭 Role Management
-
-📝 Audit Logging
-
-📊 Reporting
-
-
+Logs --> Process
+Process --> Features
+Features --> Model
+Model --> Predict
+Predict --> Threat
+Threat --> Dashboard
+```
 
 ---
 
-# 🧩 Complete System Workflow
+# ⚡ Incident Response Workflow
 
+```mermaid
+sequenceDiagram
+
+participant User
+participant SOC
+participant AI
+participant SOAR
+
+User->>SOC: Suspicious Activity
+SOC->>AI: Analyze Logs
+AI-->>SOC: Threat Detected
+SOC->>SOAR: Execute Playbook
+SOAR-->>User: Block Threat
+SOAR-->>Admin: Email Notification
+```
+
+---
+
+# 🛠 Technology Stack
+
+| Layer | Technologies |
+|--------|--------------|
+| 🎨 Frontend | React, Vite |
+| ⚙ Backend | Python, FastAPI |
+| 🗄 Database | PostgreSQL |
+| 🤖 AI | Scikit-learn, Pandas, NumPy |
+| 📊 Charts | Chart.js |
+| 🔐 Security | JWT Authentication |
+| 🐳 DevOps | Docker |
+
+---
+
+# 📂 Project Structure
+
+```text
+AI-Cyber-Threat-Intelligence-System
+│
+├── frontend
+├── backend
+├── ai-engine
+├── dashboard
+├── log-management
+├── attack-prediction
+├── soar
+├── database
+├── docker
+├── docs
+├── tests
+└── README.md
+```
+
+---
+
+# 🚀 Future Improvements
+
+- 🛰 MITRE ATT&CK Mapping
+- 🌐 Threat Intelligence API
+- ☁ Cloud Monitoring
+- 🤖 Deep Learning Detection
+- 📱 Mobile SOC Dashboard
+- 🔥 Real-Time Threat Feed
+- 🛡 Zero Trust Integration
+
+---
+
+# ⭐ Support
+
+If you like this project, don't forget to ⭐ Star the repository.
+
+<p align="center">
+
+## 🛡️ Predict • Detect • Respond • Secure
+
+</p>
+````

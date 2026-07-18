@@ -4,8 +4,9 @@
 
 <br/>
 
-<a href="#">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=2500&pause=800&color=00FF9C&center=true&vCenter=true&multiline=true&repeat=true&width=900&height=100&lines=%F0%9F%9B%A1%EF%B8%8F+AI-CYBER-THREAT-INTELLIGENCE-SYSTEM;Detect+%E2%86%92+Analyze+%E2%86%92+Predict+%E2%86%92+Respond+%E2%86%92+Learn;Autonomous+SOC+Powered+by+Machine+Learning" alt="Typing SVG" />
+<!-- BOOT SEQUENCE :: single animated typing SVG cycling through boot log lines -->
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=2000&pause=700&color=00FF9C&center=true&vCenter=true&width=900&height=140&multiline=true&repeat=true&lines=%3E+booting+ai-cyber-threat-intelligence-system...;%3E+loading+threat+intelligence+modules...;%3E+activating+ai+detection+core...;%3E+initializing+soar+response+grid...;%3E+ai+defense+core+%3A%3A+ONLINE+%F0%9F%9F%A2" alt="Boot sequence typing SVG"/>
 </a>
 
 <br/><br/>
@@ -29,7 +30,14 @@
 
 </div>
 
----
+<br/>
+
+<!-- LIVE SCROLLING THREAT FEED -->
+<div align="center">
+  <img src="assets/threat-ticker.svg" width="100%" alt="live threat feed ticker"/>
+</div>
+
+<br/>
 
 <div align="center">
 
@@ -49,6 +57,7 @@
 
 - [🌌 Project Overview](#-project-overview)
 - [🧬 Core Mission](#-core-mission)
+- [📡 Live Threat Radar](#-live-threat-radar)
 - [🏢 Enterprise SOC Architecture](#-enterprise-soc-architecture)
 - [📂 Phase Ecosystem](#-phase-ecosystem)
 - [🔥 Real-Time Attack Simulation](#-real-time-attack-simulation)
@@ -57,6 +66,7 @@
 - [⚙️ Quick Start](#️-quick-start)
 - [🏆 System Capabilities](#-final-system-capabilities)
 - [🛡️ System Identity](#️-system-identity)
+- [🐍 Live Contribution Snake](#-live-contribution-snake)
 - [🚀 Project Vision](#-project-vision)
 
 ---
@@ -94,6 +104,20 @@ flowchart TD
     style G fill:#00ff9c,color:#000,stroke:#333,stroke-width:2px
 ```
 
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f0c29,100:302b63&height=6&section=header&animation=fadeIn" width="100%"/>
+</div>
+
+---
+
+## 📡 Live Threat Radar
+
+<div align="center">
+  <img src="assets/radar-scan.svg" width="380" alt="animated radar scan"/>
+  <br/>
+  <sub>🟢 continuous sweep · 🔴 active threat blip · 🟡 medium risk · 🔵 monitored asset</sub>
+</div>
+
 ---
 
 ## 🏢 Enterprise SOC Architecture
@@ -114,6 +138,10 @@ flowchart TD
     classDef phase fill:#1e1e2f,stroke:#00ff9c,color:#00ff9c,stroke-width:2px
     classDef core fill:#302b63,stroke:#00b4ff,color:#fff,stroke-width:2px
 ```
+
+<div align="center">
+  <img src="assets/matrix-rain.svg" width="100%" alt="animated matrix code rain"/>
+</div>
 
 ---
 
@@ -414,6 +442,10 @@ docker-compose up --build
 ## 🛡️ System Identity
 
 <div align="center">
+  <img src="assets/shield-pulse.svg" width="260" alt="animated pulsing shield"/>
+</div>
+
+<div align="center">
 
 ```
 ╔════════════════════════════════════╗
@@ -425,6 +457,22 @@ docker-compose up --build
 ║                                      ║
 ╚════════════════════════════════════╝
 ```
+
+</div>
+
+---
+
+## 🐍 Live Contribution Snake
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/your-org/ai-cyber-threat-intelligence-system/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/your-org/ai-cyber-threat-intelligence-system/output/snake.svg" />
+  <img alt="contribution snake animation" src="https://raw.githubusercontent.com/your-org/ai-cyber-threat-intelligence-system/output/snake.svg" width="100%"/>
+</picture>
+
+<sub>⚙️ Auto-generated daily by <code>.github/workflows/snake.yml</code> — the snake eats through this repo's contribution graph. Update the <code>your-org</code> path once pushed, and enable GitHub Actions in repo settings for it to appear.</sub>
 
 </div>
 
@@ -444,7 +492,7 @@ flowchart LR
 
 <div align="center">
 
-### ⭐ यदि यो project लाई useful लाग्यो भने, एउटा Star दिन नबिर्सनुहोस्!
+
 
 ![Star History Chart](https://api.star-history.com/svg?repos=your-org/ai-cyber-threat-intelligence-system&type=Date)
 

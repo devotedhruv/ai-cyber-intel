@@ -1,12 +1,11 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=280&section=header&text=CYBER%20THREAT%20INTEL%20AI&fontSize=50&fontAlignY=35&desc=Autonomous%20AI-Powered%20Security%20Operations%20Center&descAlignY=55&descSize=18&fontColor=00FF9C&animation=fadeIn" width="100%"/>
+<img src="assets/hero-banner.svg" width="100%" alt="AI Cyber Threat Intelligence System — animated banner"/>
 
-<br/>
+<br/><br/>
 
-<!-- BOOT SEQUENCE :: single animated typing SVG cycling through boot log lines -->
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=2000&pause=700&color=00FF9C&center=true&vCenter=true&width=900&height=140&multiline=true&repeat=true&lines=%3E+booting+ai-cyber-threat-intelligence-system...;%3E+loading+threat+intelligence+modules...;%3E+activating+ai+detection+core...;%3E+initializing+soar+response+grid...;%3E+ai+defense+core+%3A%3A+ONLINE+%F0%9F%9F%A2" alt="Boot sequence typing SVG"/>
+<a href="#">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=2500&pause=800&color=00FF9C&center=true&vCenter=true&multiline=true&repeat=true&width=900&height=80&lines=Detect+%E2%86%92+Analyze+%E2%86%92+Predict+%E2%86%92+Respond+%E2%86%92+Learn;Autonomous+SOC+Powered+by+Machine+Learning" alt="Typing SVG" />
 </a>
 
 <br/><br/>
@@ -22,32 +21,9 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Deployment-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-<br/>
-
 ![Profile Views](https://komarev.com/ghpvc/?username=ai-cyber-threat-system&color=00ff9c&style=flat-square&label=SCANS+DETECTED)
 ![GitHub Stars](https://img.shields.io/github/stars/your-org/ai-cyber-threat-intelligence-system?style=social)
 ![GitHub Forks](https://img.shields.io/github/forks/your-org/ai-cyber-threat-intelligence-system?style=social)
-
-</div>
-
-<br/>
-
-<!-- LIVE SCROLLING THREAT FEED -->
-<div align="center">
-  <img src="assets/threat-ticker.svg" width="100%" alt="live threat feed ticker"/>
-</div>
-
-<br/>
-
-<div align="center">
-
-```
-[ SYSTEM BOOTING........................... 100% ]
-[ LOADING THREAT INTELLIGENCE.............. 100% ]
-[ ACTIVATING AI ENGINE...................... 100% ]
-[ INITIALIZING DEFENSE CORE................ 100% ]
-[ SOC PLATFORM STATUS : ████████████ ONLINE 🟢 ]
-```
 
 </div>
 
@@ -56,17 +32,17 @@
 ## 📑 Table of Contents
 
 - [🌌 Project Overview](#-project-overview)
+- [💻 System Boot Sequence](#-system-boot-sequence)
 - [🧬 Core Mission](#-core-mission)
-- [📡 Live Threat Radar](#-live-threat-radar)
 - [🏢 Enterprise SOC Architecture](#-enterprise-soc-architecture)
+- [📡 Live Threat Radar](#-live-threat-radar)
 - [📂 Phase Ecosystem](#-phase-ecosystem)
 - [🔥 Real-Time Attack Simulation](#-real-time-attack-simulation)
 - [🧠 AI Self-Learning Loop](#-ai-self-learning-loop)
 - [🛠️ Technology Stack](#️-technology-stack)
 - [⚙️ Quick Start](#️-quick-start)
 - [🏆 System Capabilities](#-final-system-capabilities)
-- [🛡️ System Identity](#️-system-identity)
-- [🐍 Live Contribution Snake](#-live-contribution-snake)
+- [🐍 Contribution Activity](#-contribution-activity)
 - [🚀 Project Vision](#-project-vision)
 
 ---
@@ -74,8 +50,6 @@
 ## 🌌 Project Overview
 
 **AI-Cyber-Threat-Intelligence-System** एउटा advanced AI-powered cybersecurity platform हो, जुन एउटा intelligent **Security Operations Center (SOC)** को रूपमा काम गर्न design गरिएको छ।
-
-यो system ले निम्न कुराहरूलाई एउटै unified cyber defense ecosystem मा combine गर्छ:
 
 | Module | Description |
 |---|---|
@@ -85,6 +59,14 @@
 | 🕸️ Attack Path Prediction | Graph-based future attack simulation |
 | ⚡ Automated Response (SOAR) | Autonomous incident containment |
 | 🎯 Advanced Threat Hunting | Continuous proactive AI hunting |
+
+---
+
+## 💻 System Boot Sequence
+
+<div align="center">
+<img src="assets/terminal-boot.svg" width="100%" alt="Animated terminal boot sequence"/>
+</div>
 
 ---
 
@@ -103,20 +85,6 @@ flowchart TD
     style A fill:#ff003c,color:#fff,stroke:#333,stroke-width:2px
     style G fill:#00ff9c,color:#000,stroke:#333,stroke-width:2px
 ```
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f0c29,100:302b63&height=6&section=header&animation=fadeIn" width="100%"/>
-</div>
-
----
-
-## 📡 Live Threat Radar
-
-<div align="center">
-  <img src="assets/radar-scan.svg" width="380" alt="animated radar scan"/>
-  <br/>
-  <sub>🟢 continuous sweep · 🔴 active threat blip · 🟡 medium risk · 🔵 monitored asset</sub>
-</div>
 
 ---
 
@@ -139,8 +107,12 @@ flowchart TD
     classDef core fill:#302b63,stroke:#00b4ff,color:#fff,stroke-width:2px
 ```
 
+---
+
+## 📡 Live Threat Radar
+
 <div align="center">
-  <img src="assets/matrix-rain.svg" width="100%" alt="animated matrix code rain"/>
+<img src="assets/radar-scan.svg" width="100%" alt="Animated radar sweep detecting threats"/>
 </div>
 
 ---
@@ -237,14 +209,9 @@ flowchart LR
 - ✅ Vulnerability Impact
 - ✅ Risk Forecast
 
-```mermaid
-flowchart TD
-    A[👤 Attacker] --> B[🔑 User Account]
-    B --> C[🖥️ Application Server]
-    C --> D[🗄️ Database]
-    style A fill:#ff003c,color:#fff
-    style D fill:#302b63,color:#fff
-```
+<div align="center">
+<img src="assets/attack-path.svg" width="100%" alt="Animated attack path traversal"/>
+</div>
 
 </details>
 
@@ -359,24 +326,6 @@ flowchart TD
 
 ---
 
-## 🔗 Final Integrated Flow
-
-```mermaid
-flowchart LR
-    P1[Phase 1<br/>Foundation] --> P3[Phase 3<br/>Threat Intelligence]
-    P3 --> P4[Phase 4<br/>AI Detection]
-    P4 --> P5[Phase 5<br/>Attack Prediction]
-    P5 --> P6[Phase 6<br/>SOAR Response]
-    P6 --> P2[Phase 2<br/>SOC Dashboard]
-    P2 --> P9[Phase 9<br/>AI Threat Hunting]
-    P9 --> P8[Phase 8<br/>Deployment]
-
-    classDef node fill:#1e1e2f,stroke:#00ff9c,color:#00ff9c,stroke-width:2px
-    class P1,P2,P3,P4,P5,P6,P8,P9 node
-```
-
----
-
 ## 🛠️ Technology Stack
 
 <div align="center">
@@ -439,42 +388,15 @@ docker-compose up --build
 
 ---
 
-## 🛡️ System Identity
+## 🐍 Contribution Activity
 
-<div align="center">
-  <img src="assets/shield-pulse.svg" width="260" alt="animated pulsing shield"/>
-</div>
+This repo auto-generates an animated snake that eats through the contribution graph, powered by the included `.github/workflows/snake.yml` (runs on every push + every 6 hours).
 
-<div align="center">
-
-```
-╔════════════════════════════════════╗
-║                                      ║
-║   AI DEFENSE CORE     : ONLINE  🟢  ║
-║   THREAT ENGINE       : ACTIVE  🔥  ║
-║   SOC MONITOR         : RUNNING 📊  ║
-║   RESPONSE SYSTEM     : READY   ⚡  ║
-║                                      ║
-╚════════════════════════════════════╝
+```markdown
+![snake animation](https://raw.githubusercontent.com/your-org/ai-cyber-threat-intelligence-system/output/github-contribution-grid-snake.svg)
 ```
 
-</div>
-
----
-
-## 🐍 Live Contribution Snake
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/your-org/ai-cyber-threat-intelligence-system/output/snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/your-org/ai-cyber-threat-intelligence-system/output/snake.svg" />
-  <img alt="contribution snake animation" src="https://raw.githubusercontent.com/your-org/ai-cyber-threat-intelligence-system/output/snake.svg" width="100%"/>
-</picture>
-
-<sub>⚙️ Auto-generated daily by <code>.github/workflows/snake.yml</code> — the snake eats through this repo's contribution graph. Update the <code>your-org</code> path once pushed, and enable GitHub Actions in repo settings for it to appear.</sub>
-
-</div>
+> ⚠️ यो snake first push र Action run भएपछि मात्र देखिन्छ — repo लाई GitHub मा push गरेर Actions tab मा "generate contribution snake animation" workflow एकपटक चलाइदिनुहोस्, त्यसपछि माथिको image link ले काम गर्नेछ।
 
 ---
 
@@ -493,9 +415,8 @@ flowchart LR
 <div align="center">
 
 
-
 ![Star History Chart](https://api.star-history.com/svg?repos=your-org/ai-cyber-threat-intelligence-system&type=Date)
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=150&section=footer&text=END%20OF%20AI-CYBER-THREAT-INTELLIGENCE-SYSTEM&fontSize=20&fontColor=00FF9C&animation=fadeIn" width="100%"/>
+<img src="assets/hero-banner.svg" width="100%" alt="footer banner"/>
 
 </div>

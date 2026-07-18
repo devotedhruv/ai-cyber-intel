@@ -2,7 +2,13 @@
 
 <div align="center">
 
+<img src="https://your-banner-gif-url.gif">
+
 # 🤖 NEURAL CYBER DEFENSE PLATFORM
+
+### Autonomous AI Powered Security Operations Center
+
+
 
 ```
 ██████╗ ██╗   ██╗██████╗ ███████╗██████╗ 

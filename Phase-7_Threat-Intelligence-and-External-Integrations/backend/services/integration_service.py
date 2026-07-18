@@ -17,7 +17,7 @@ class IntegrationService:
         targets = [
             ("phase3", f"{self.settings.phase3_api_url}/logs"),
             ("phase4", f"{self.settings.phase4_api_url}/ai/predictions"),
-            ("phase5", f"{self.settings.phase5_api_url}/attack-paths"),
+            ("phase5", f"{self.settings.phase5_api_url}/attack/paths"),
             ("phase6", f"{self.settings.phase6_api_url}/incidents"),
         ]
         events: list[tuple[str, dict]] = []

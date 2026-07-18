@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const client = axios.create({ baseURL: import.meta.env.VITE_THREAT_API_BASE_URL || "http://localhost:8001/api", timeout: Number(import.meta.env.VITE_API_TIMEOUT_MS || 10000), headers: { Accept: "application/json" } });
+const centralBase = import.meta.env.VITE_CENTRAL_API_BASE_URL;
+const client = axios.create({ baseURL: centralBase ? `${centralBase}/phase/3/api` : (import.meta.env.VITE_THREAT_API_BASE_URL || "http://localhost:8001/api"), timeout: Number(import.meta.env.VITE_API_TIMEOUT_MS || 10000), headers: { Accept: "application/json" } });
 client.interceptors.response.use((response) => response.data, (error) => Promise.reject(new Error(error.response?.data?.error?.message || "Threat intelligence engine is unavailable")));
 
 export const threatIntelligenceApi = {

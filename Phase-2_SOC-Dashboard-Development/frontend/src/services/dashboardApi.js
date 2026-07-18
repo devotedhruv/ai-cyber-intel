@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const api = axios.create({ baseURL: import.meta.env.VITE_API_BASE_URL || "/api", timeout: Number(import.meta.env.VITE_API_TIMEOUT_MS || 10000), headers: { Accept: "application/json" } });
+const centralBase = import.meta.env.VITE_CENTRAL_API_BASE_URL;
+const api = axios.create({ baseURL: centralBase ? `${centralBase}/phase/2/api` : (import.meta.env.VITE_API_BASE_URL || "/api"), timeout: Number(import.meta.env.VITE_API_TIMEOUT_MS || 10000), headers: { Accept: "application/json" } });
 
 function normalizeError(error) {
   if (error.code === "ECONNABORTED") return new Error("The security service timed out. Please retry.");

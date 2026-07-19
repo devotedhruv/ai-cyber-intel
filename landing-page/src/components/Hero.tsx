@@ -9,7 +9,7 @@ export function Hero() {
         <h1 id="hero-title">Detect threats.<br />Predict attacks.<br /><em>Respond intelligently.</em></h1>
         <p className="hero__lead">An integrated Security Operations Center engineering platform that connects threat intelligence, explainable AI detection, attack-path analysis, incident workflows, and continuous threat hunting.</p>
         <div className="hero__actions">
-          <a className="button button--primary" href={LINKS.dashboard} target="_blank" rel="noopener noreferrer">Explore Platform <ArrowUpRight /></a>
+          <a className="button button--primary" href={LINKS.dashboard} target="_top">Explore Platform <ArrowUpRight /></a>
           <a className="button button--ghost" href="#workflow">View System Workflow <ArrowDown /></a>
         </div>
         <div className="hero__meta"><span><ShieldCheck /> Defensive by design</span><span><Database /> Phase-owned data</span><span><Radio /> Integrated telemetry</span></div>

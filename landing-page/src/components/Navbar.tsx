@@ -23,7 +23,7 @@ export function Navbar() {
       </button>
       <div id="mobile-navigation" className={`nav__links ${open ? 'is-open' : ''}`}>
         {navigation.map(([label, href]) => <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>)}
-        <a className="button button--small button--primary" href={LINKS.dashboard} target="_blank" rel="noopener noreferrer">Open Dashboard</a>
+        <a className="button button--small button--primary" href={LINKS.dashboard} target="_top">Open Dashboard</a>
       </div>
     </nav>
   </header>

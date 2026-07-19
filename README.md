@@ -1,5 +1,5 @@
 <div align="center">
-# AI Cyber Threat Intelligence System
+ AI Cyber Threat Intelligence System
 <br/>
 
 <a href="#">

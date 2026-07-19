@@ -21,7 +21,11 @@ services:
       context: .
       dockerfile: backend/Dockerfile
     environment:
-      CENTRAL_DATABASE_URL: postgresql+psycopg://cti:${CENTRAL_POSTGRES_PASSWORD}@central-database:5432/cti_central
+      CENTRAL_DATABASE_HOST: central-database
+      CENTRAL_DATABASE_PORT: 5432
+      CENTRAL_DATABASE_NAME: cti_central
+      CENTRAL_DATABASE_USER: cti
+      CENTRAL_DATABASE_PASSWORD: ${CENTRAL_POSTGRES_PASSWORD}
       CENTRAL_PHASE1_URL: http://host.docker.internal:8000
       CENTRAL_PHASE2_URL: http://host.docker.internal:8010
       CENTRAL_PHASE3_URL: http://host.docker.internal:8001

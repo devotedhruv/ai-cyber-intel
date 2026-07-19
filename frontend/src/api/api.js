@@ -7,9 +7,11 @@ const client = axios.create({
 })
 
 const TOKEN_KEY = 'sentinel_access_token'
+const USER_KEY = 'sentinel_user'
+const tokenStorage = () => localStorage.getItem(TOKEN_KEY) ? localStorage : sessionStorage
 
 client.interceptors.request.use((config) => {
-  const token = localStorage.getItem(TOKEN_KEY)
+  const token = localStorage.getItem(TOKEN_KEY) || sessionStorage.getItem(TOKEN_KEY)
   if (token) config.headers.Authorization = `Bearer ${token}`
   return config
 })
@@ -28,20 +30,35 @@ const phase = (number, path) => `/api/v1/phase/${number}/${path.replace(/^\//, '
 
 export const authApi = {
   login: async (credentials) => {
-    const session = await post('/api/auth/login', credentials)
-    localStorage.setItem(TOKEN_KEY, session.access_token)
-    localStorage.setItem('sentinel_user', JSON.stringify(session.user))
+    const { remember, ...payload } = credentials
+    const session = await post('/api/auth/login', payload)
+    const storage = remember ? localStorage : sessionStorage
+    localStorage.removeItem(TOKEN_KEY); localStorage.removeItem(USER_KEY)
+    sessionStorage.removeItem(TOKEN_KEY); sessionStorage.removeItem(USER_KEY)
+    storage.setItem(TOKEN_KEY, session.access_token)
+    storage.setItem(USER_KEY, JSON.stringify(session.user))
     return session
   },
   me: () => get('/api/auth/me'),
-  logout: () => {
+  logout: async () => {
+    try { await post('/api/auth/logout') } finally {
+      localStorage.removeItem(TOKEN_KEY)
+      localStorage.removeItem(USER_KEY)
+      sessionStorage.removeItem(TOKEN_KEY)
+      sessionStorage.removeItem(USER_KEY)
+    }
+  },
+  clearSession: () => {
     localStorage.removeItem(TOKEN_KEY)
-    localStorage.removeItem('sentinel_user')
+    localStorage.removeItem(USER_KEY)
+    sessionStorage.removeItem(TOKEN_KEY)
+    sessionStorage.removeItem(USER_KEY)
   },
-  hasToken: () => Boolean(localStorage.getItem(TOKEN_KEY)),
+  hasToken: () => Boolean(localStorage.getItem(TOKEN_KEY) || sessionStorage.getItem(TOKEN_KEY)),
   storedUser: () => {
-    try { return JSON.parse(localStorage.getItem('sentinel_user')) } catch { return null }
+    try { return JSON.parse(tokenStorage().getItem(USER_KEY)) } catch { return null }
   },
+  storeUser: (user) => tokenStorage().setItem(USER_KEY, JSON.stringify(user)),
 }
 
 export const logApi = {
@@ -57,6 +74,7 @@ export const systemApi = {
 }
 
 export const threatApi = {
+  security: (params = { limit: 8 }) => get('/api/threats', { params }),
   list: (params = { page_size: 50 }) => get(phase(3, '/api/threats'), { params }),
   statistics: () => get(phase(3, '/api/threat-statistics')),
   logs: (params = { page_size: 50 }) => get(phase(3, '/api/logs'), { params }),
@@ -65,7 +83,18 @@ export const threatApi = {
   indicators: (params) => get(phase(7, '/api/ioc'), { params }),
 }
 
+export const riskApi = {
+  current: () => get('/api/risk'),
+}
+
+export const securityOperationsApi = {
+  detections: (limit = 8) => get('/api/detections', { params: { limit } }),
+  attackPaths: (limit = 8) => get('/api/attack-paths', { params: { limit } }),
+  incidents: (params = { limit: 8 }) => get('/api/incidents', { params }),
+}
+
 export const alertApi = {
+  security: (params = { status: 'ACTIVE', limit: 50 }) => get('/api/alerts', { params }),
   list: (params = { limit: 50 }) => get(phase(2, '/api/alerts'), { params }),
   aiDetections: (params = { limit: 50 }) => get(phase(4, '/api/ai/alerts'), { params }),
   analyze: (event) => post(phase(4, '/api/ai/analyze'), event),

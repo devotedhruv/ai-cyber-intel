@@ -12,6 +12,10 @@ import Reports from './pages/Reports'
 import Settings from './pages/Settings'
 import Login from './pages/Login'
 import Logs from './pages/Logs'
+import AIAnalytics from './pages/AIAnalytics'
+import AttackGraph from './pages/AttackGraph'
+import Incidents from './pages/Incidents'
+import Architecture from './pages/Architecture'
 import { LoadingState } from './components/PageState'
 
 export default function App() {
@@ -21,10 +25,10 @@ export default function App() {
 
   useEffect(() => {
     if (!authApi.hasToken()) { setCheckingAuth(false); return }
-    authApi.me().then(current => { setUser(current); localStorage.setItem('sentinel_user', JSON.stringify(current)) }).catch(() => { authApi.logout(); setUser(null) }).finally(() => setCheckingAuth(false))
+    authApi.me().then(current => { setUser(current); authApi.storeUser(current) }).catch(() => { authApi.clearSession(); setUser(null) }).finally(() => setCheckingAuth(false))
   }, [])
 
-  function logout() { authApi.logout(); setUser(null) }
+  async function logout() { await authApi.logout(); setUser(null) }
   if (checkingAuth) return <LoadingState label="Verifying secure session…" />
 
   return (
@@ -38,8 +42,13 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/logs" element={<Logs />} />
+            <Route path="/monitoring" element={<Logs />} />
             <Route path="/threats" element={<Threats />} />
             <Route path="/alerts" element={<Alerts />} />
+            <Route path="/ai-detection" element={<AIAnalytics />} />
+            <Route path="/attack-graph" element={<AttackGraph />} />
+            <Route path="/incidents" element={<Incidents />} />
+            <Route path="/architecture" element={<Architecture />} />
             <Route path="/assets" element={<Assets />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/settings" element={<Settings />} />

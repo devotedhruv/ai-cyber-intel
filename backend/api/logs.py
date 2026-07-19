@@ -28,6 +28,13 @@ class LogResponse(BaseModel):
     id: int
     event_type: str
     username: str
+    status: str | None
+    ip_address: str | None
+    user_agent: str | None
+    device_information: str | None
+    location_information: str | None
+    failure_reason: str | None
+    created_at: datetime
     source_ip: str
     severity: str
     description: str

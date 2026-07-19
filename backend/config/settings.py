@@ -12,7 +12,12 @@ class Settings(BaseSettings):
     app_name: str = "AI Cyber Threat Intelligence - Central API"
     app_version: str = "1.0.0"
     environment: str = "development"
-    database_url: str = "postgresql+psycopg://cti:cti@localhost:5432/cti_central"
+    database_url: str | None = None
+    database_host: str = "localhost"
+    database_port: int = Field(default=5432, ge=1, le=65_535)
+    database_name: str = "cti_central"
+    database_user: str = "cti"
+    database_password: str = Field(default="cti", repr=False)
     request_timeout_seconds: float = Field(default=10, ge=1, le=60)
     cors_origins: str = "http://localhost:5173,http://localhost:8080"
 
@@ -28,6 +33,7 @@ class Settings(BaseSettings):
     phase6_token: str | None = Field(default=None, repr=False)
     phase9_api_key: str | None = Field(default=None, repr=False)
     auth_token_ttl_minutes: int = Field(default=480, ge=15, le=10_080)
+    trusted_location_header: str | None = None
     bootstrap_admin_username: str = "admin"
     bootstrap_admin_email: str = "admin@localhost"
     bootstrap_admin_password: str | None = Field(default=None, min_length=12, repr=False)

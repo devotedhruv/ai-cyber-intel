@@ -61,6 +61,10 @@ class AuthService:
         statement = select(User).join(AuthSession).where(AuthSession.token_hash == token_digest(token), AuthSession.expires_at > now)
         return self.db.scalar(statement)
 
+    def revoke_token(self, token: str) -> None:
+        self.db.execute(delete(AuthSession).where(AuthSession.token_hash == token_digest(token)))
+        self.db.commit()
+
     def create_user(self, username: str, email: str, password: str, role: str = "analyst") -> User:
         normalized = username.strip().lower()
         if self.db.scalar(select(User).where((User.username == normalized) | (User.email == email.strip().lower()))):

@@ -1,11 +1,5 @@
 <div align="center">
-
-<img src="ChatGPT Image Jul 19, 2026, 03_59_33 PM" 
-     alt="AI Cyber Threat Intelligence System — animated banner" 
-     style="width:50%; border-radius:8px;">
-
-
-<br/><br/>
+<br/>
 
 <a href="#">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=2500&pause=800&color=00FF9C&center=true&vCenter=true&multiline=true&repeat=true&width=900&height=80&lines=Detect+%E2%86%92+Analyze+%E2%86%92+Predict+%E2%86%92+Respond+%E2%86%92+Learn;Autonomous+SOC+Powered+by+Machine+Learning" alt="Typing SVG" />

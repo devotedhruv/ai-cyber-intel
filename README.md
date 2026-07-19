@@ -2,7 +2,7 @@
 
 <img src="https://copilot.microsoft.com/th/id/BCO.e1208f80-13b3-42a4-8df8-710bfd6385c6.png" 
      alt="AI Cyber Threat Intelligence System — animated banner" 
-     width="100%">
+     width="30%">
 
 
 <br/><br/>

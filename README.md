@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://copilot.microsoft.com/th/id/BCO.e1208f80-13b3-42a4-8df8-710bfd6385c6.png" 
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXFrbnE1MjdjY2k2ODJybzM5YWFtdzI2Y3J4cDBkYm1nOHJ4aGtvYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l0HlNaQ6gWfllcjDO/giphy.gif" 
      alt="AI Cyber Threat Intelligence System — animated banner" 
-     width="30%">
+     style="width:30%; border-radius:8px;">
 
 
 <br/><br/>

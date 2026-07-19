@@ -1,14 +1,17 @@
-import { Activity, BellRing, FileBarChart, LayoutDashboard, Network, Radar, ScrollText, Settings, Shield, X } from 'lucide-react'
+import { Activity, BellRing, Bot, FileBarChart, HeartPulse, LayoutDashboard, Network, Radar, ScrollText, Shield, Siren, Workflow, X } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 
 const nav = [
-  { to: '/', label: 'Overview', icon: LayoutDashboard },
+  { to: '/', label: 'Dashboard', icon: LayoutDashboard },
+  { to: '/monitoring', label: 'Threat Monitoring', icon: Radar },
   { to: '/logs', label: 'Security logs', icon: ScrollText },
-  { to: '/threats', label: 'Threat intelligence', icon: Radar },
-  { to: '/alerts', label: 'Alerts & detections', icon: BellRing },
-  { to: '/assets', label: 'Asset inventory', icon: Network },
+  { to: '/threats', label: 'Threat Intelligence', icon: BellRing },
+  { to: '/ai-detection', label: 'AI Detection', icon: Bot },
+  { to: '/attack-graph', label: 'Attack Graph', icon: Network },
+  { to: '/incidents', label: 'Incidents', icon: Siren },
+  { to: '/incidents', label: 'SOAR Automation', icon: Workflow },
   { to: '/reports', label: 'Reports', icon: FileBarChart },
-  { to: '/settings', label: 'Settings', icon: Settings },
+  { to: '/architecture', label: 'System Health', icon: HeartPulse },
 ]
 
 export default function Sidebar({ open, onClose }) {

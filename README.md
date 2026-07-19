@@ -2,7 +2,7 @@
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXFrbnE1MjdjY2k2ODJybzM5YWFtdzI2Y3J4cDBkYm1nOHJ4aGtvYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l0HlNaQ6gWfllcjDO/giphy.gif" 
      alt="AI Cyber Threat Intelligence System — animated banner" 
-     style="width:30%; border-radius:8px;">
+     style="width:50%; border-radius:8px;">
 
 
 <br/><br/>

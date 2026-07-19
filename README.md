@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="./assets/hero-banner.svg" alt="AI Cyber Threat Intelligence System — animated banner" style="width:100%;">
+<img src="https://copilot.microsoft.com/th/id/BCO.e1208f80-13b3-42a4-8df8-710bfd6385c6.png" 
+     alt="AI Cyber Threat Intelligence System — animated banner" 
+     width="100%">
 
 
 <br/><br/>

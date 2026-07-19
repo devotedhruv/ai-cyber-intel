@@ -1,6 +1,7 @@
 <div align="center">
 
-<img src="assets/hero-banner.svg" width="100%" alt="AI Cyber Threat Intelligence System — animated banner"/>
+<img src="./assets/hero-banner.svg" alt="AI Cyber Threat Intelligence System — animated banner" style="width:100%;">
+
 
 <br/><br/>
 

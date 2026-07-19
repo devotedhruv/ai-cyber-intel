@@ -9,8 +9,10 @@ from backend.api.auth import router as auth_router
 from backend.api.alerts import router as alerts_router
 from backend.api.gateway import router as gateway_router
 from backend.api.logs import router as logs_router
+from backend.api.notifications import router as notifications_router
 from backend.api.operations import router as operations_router
 from backend.api.risk import router as risk_router
+from backend.api.reports import router as reports_router
 from backend.api.pipeline import router as pipeline_router
 from backend.api.system import router as system_router
 from backend.api.threats import router as threats_router
@@ -52,5 +54,5 @@ def root_health() -> dict:
 for router in (system_router, pipeline_router, gateway_router):
     app.include_router(router, prefix="/api/v1")
 
-for router in (auth_router, logs_router, alerts_router, threats_router, risk_router, operations_router):
+for router in (auth_router, logs_router, alerts_router, threats_router, risk_router, operations_router, notifications_router, reports_router):
     app.include_router(router, prefix="/api")

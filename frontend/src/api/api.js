@@ -26,6 +26,7 @@ client.interceptors.response.use(
 
 const get = async (url, config) => (await client.get(url, config)).data
 const post = async (url, data, config) => (await client.post(url, data, config)).data
+const put = async (url, data, config) => (await client.put(url, data, config)).data
 const phase = (number, path) => `/api/v1/phase/${number}/${path.replace(/^\//, '')}`
 
 export const authApi = {
@@ -127,7 +128,15 @@ export const huntingApi = {
 }
 
 export const reportsApi = {
-  list: () => get(phase(2, '/api/reports')),
+  summary: () => get('/api/reports'),
+  list: () => get('/api/reports/archive'),
+  generate: (report_type) => post('/api/reports/generate', { report_type }),
+  get: (id) => get(`/api/reports/${id}`),
+}
+
+export const notificationApi = {
+  list: (params = { limit: 30 }) => get('/api/notifications', { params }),
+  markRead: (id) => put(`/api/notifications/${id}/read`),
 }
 
 export const unwrapList = (payload, keys = []) => {

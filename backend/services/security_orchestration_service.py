@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 
 from backend.models import AIDetection, AttackPath, Incident, SecurityLog, ThreatEvent
 from backend.services.risk_service import RiskAssessment
+from backend.services.notification_service import NotificationService
 
 
 class SecurityOrchestrationService:
@@ -47,6 +48,7 @@ class SecurityOrchestrationService:
             self.db.add(attack_path)
 
         incident = None
+        incident_created = False
         if threat.risk_level == "HIGH":
             cutoff = datetime.now(timezone.utc) - timedelta(minutes=5)
             incident = self.db.scalar(select(Incident).where(
@@ -62,8 +64,17 @@ class SecurityOrchestrationService:
                     response_action="Incident recorded; response workflow started; administrator notification queued; defensive containment prepared.",
                 )
                 self.db.add(incident)
+                incident_created = True
         self.db.commit()
         self.db.refresh(attack_path)
         if incident:
             self.db.refresh(incident)
+        if incident_created and incident:
+            NotificationService(self.db).create(
+                title="SOAR Incident Response Started",
+                message=f"Automated defensive workflow started for {incident.incident_type}.",
+                notification_type="INCIDENT",
+                severity=incident.severity,
+                deduplicate_minutes=5,
+            )
         return attack_path, incident

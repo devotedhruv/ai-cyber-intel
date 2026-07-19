@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from backend.models import Alert, SecurityLog, ThreatEvent
 from backend.services.risk_service import RiskCalculationService
 from backend.services.security_orchestration_service import SecurityOrchestrationService
+from backend.services.notification_service import NotificationService
 
 
 class ThreatIntelligenceService:
@@ -53,6 +54,16 @@ class ThreatIntelligenceService:
         self._create_alert(log.username, source_ip, threat_type, assessment.failed_attempts, cutoff)
         self.db.commit()
         self.db.refresh(threat)
+        if threat.risk_level == "HIGH":
+            NotificationService(self.db).create(
+                title="Critical Security Threat Detected",
+                message=f"{threat.threat_type} from {source_ip} reached risk score {threat.risk_score}.",
+                notification_type="CRITICAL_THREAT",
+                severity="CRITICAL",
+                related_user=log.username,
+                ip_address=source_ip,
+                deduplicate_minutes=self.WINDOW_MINUTES,
+            )
         orchestration.process_threat(threat)
         return threat
 

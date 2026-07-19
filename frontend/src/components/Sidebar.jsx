@@ -2,7 +2,7 @@ import { Activity, BellRing, Bot, FileBarChart, HeartPulse, LayoutDashboard, Net
 import { NavLink } from 'react-router-dom'
 
 const nav = [
-  { to: '/', label: 'Dashboard', icon: LayoutDashboard },
+  { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { to: '/monitoring', label: 'Threat Monitoring', icon: Radar },
   { to: '/logs', label: 'Security logs', icon: ScrollText },
   { to: '/threats', label: 'Threat Intelligence', icon: BellRing },

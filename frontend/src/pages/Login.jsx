@@ -9,14 +9,14 @@ export default function Login({ authenticated, onLogin }) {
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
   const location = useLocation()
-  if (authenticated) return <Navigate to="/" replace />
+  if (authenticated) return <Navigate to="/dashboard" replace />
 
   async function login(credentials) {
     setLoading(true); setError('')
     try {
       const session = await authApi.login(credentials)
       onLogin(session)
-      navigate(location.state?.from?.pathname || '/', { replace: true, state: { authenticationMessage: 'Authentication successful' } })
+      navigate(location.state?.from?.pathname || '/dashboard', { replace: true, state: { authenticationMessage: 'Authentication successful' } })
     } catch (requestError) {
       setError(requestError.status === 401 ? 'Invalid credentials' : requestError.message || 'Login failed. Check your credentials.')
     } finally { setLoading(false) }

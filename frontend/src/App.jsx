@@ -16,6 +16,7 @@ import AIAnalytics from './pages/AIAnalytics'
 import AttackGraph from './pages/AttackGraph'
 import Incidents from './pages/Incidents'
 import Architecture from './pages/Architecture'
+import Landing from './pages/Landing'
 import { LoadingState } from './components/PageState'
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
 
   return (
     <Routes>
+      <Route path="/" element={<Landing />} />
       <Route path="/login" element={<Login authenticated={Boolean(user)} onLogin={session => setUser(session.user)} />} />
       <Route path="/*" element={<ProtectedRoute authenticated={Boolean(user)}><div className="app-shell">
       <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
@@ -40,7 +42,7 @@ export default function App() {
         <Navbar onMenu={() => setSidebarOpen(true)} user={user} onLogout={logout} />
         <main className="page-container">
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/logs" element={<Logs />} />
             <Route path="/monitoring" element={<Logs />} />
             <Route path="/threats" element={<Threats />} />
@@ -52,7 +54,7 @@ export default function App() {
             <Route path="/assets" element={<Assets />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/settings" element={<Settings />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<Navigate to="/dashboard" replace />} />
           </Routes>
         </main>
         <Footer />

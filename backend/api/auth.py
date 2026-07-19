@@ -10,6 +10,7 @@ from backend.database import get_db
 from backend.models import SecurityLog, User
 from backend.services.auth_service import AuthService, InvalidCredentials
 from backend.services.detection_service import SecurityDetectionService
+from backend.services.notification_service import NotificationService
 from backend.services.threat_intelligence_service import ThreatIntelligenceService
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
@@ -65,6 +66,14 @@ def login(payload: LoginRequest, request: Request, db: Session = Depends(get_db)
         )
         db.add(security_log)
         db.commit()
+        NotificationService(db).create(
+            title="Failed Login Attempt",
+            message=f"Failed authentication attempt for user {username} from {ip_address}.",
+            notification_type="AUTHENTICATION",
+            severity="MEDIUM",
+            related_user=username,
+            ip_address=ip_address,
+        )
         SecurityDetectionService(db).detect_brute_force(username, ip_address)
         ThreatIntelligenceService(db).analyze_authentication(security_log)
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=str(exc), headers={"WWW-Authenticate": "Bearer"}) from exc
